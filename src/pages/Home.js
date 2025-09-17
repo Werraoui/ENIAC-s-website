@@ -247,14 +247,59 @@ const Home = () => {
       </div>
     </section>
 
-    {/* Logos Section */}
-    <section className="logos-section">
-      <div className="logos-wrap">
-        <img src="/logo1.png" alt="Logo 1" className="logo-item" />
-        <img src="/logo2.png" alt="Logo 2" className="logo-item" />
-        <img src="/logo3.png" alt="Logo 3" className="logo-item" />
+    {/* Team Section */}
+    <section className="team">
+      <div className="team-wrap">
+        <h2 className="team-title">Our Team</h2>
+        <p className="team-sub">The people behind ENIAC.</p>
+
+        <div className="team-grid">
+          {[
+            { name: 'Amina Zahra', role: 'President • Backend', photo: '/team/amina.jpg' },
+            { name: 'Youssef El Idrissi', role: 'Vice President • AI/ML', photo: '/team/youssef.jpg' },
+            { name: 'Sara Benali', role: 'Coordinator • Frontend', photo: '/team/sara.jpg' },
+            { name: 'Member Four', role: 'Design • UI/UX', photo: '/team/member4.jpg' },
+            { name: 'Member Five', role: 'DevOps • Cloud', photo: '/team/member5.jpg' },
+            { name: 'Member Six', role: 'Mobile • Flutter', photo: '/team/member6.jpg' },
+          ].map((m) => (
+            <div key={m.name} className="member-card">
+              <img src={m.photo} alt={m.name} className="avatar" />
+              <div className="member-info">
+                <div className="member-name">{m.name}</div>
+                <div className="member-role">{m.role}</div>
+                <div className="member-links">
+                  <a href="#" className="social-link">
+                    <img src="/icons/linkedin.svg" alt="LinkedIn" className="social-icon" />
+                  </a>
+                  <a href="#" className="social-link">
+                    <img src="/icons/github.svg" alt="GitHub" className="social-icon" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
+
+    {/* Join Us Section */}
+    <section className="join-us">
+      <div className="join-wrap">
+        <h2 className="join-title">Ready to Build What’s Next?</h2>
+        <p className="join-sub">Join a community that learns by doing and ships together.</p>
+        <div className="join-buttons">
+          <a className="btn join-primary" href="#join">Become a Member</a>
+        </div>
+        <div className="join-icons">
+          <a className="join-icon" href="#github" aria-label="GitHub"></a>
+          <a className="join-icon" href="#linkedin" aria-label="LinkedIn"></a>
+          <a className="join-icon" href="#instagram" aria-label="Instagram"></a>
+          <a className="join-icon" href="#x" aria-label="X"></a>
+        </div>
+      </div>
+    </section>
+
+    
     </>
   )
 }

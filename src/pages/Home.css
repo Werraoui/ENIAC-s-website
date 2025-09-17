@@ -266,3 +266,51 @@
   .project-cards { grid-template-columns: 1fr; }
 }
 
+/* ========================
+   Team Section
+   ======================== */
+.team { width: 100%; padding: 2.4rem 1.2rem 3rem; background: #0f173d; color: #e6eaff; }
+.team-wrap { max-width: 1200px; margin: 0 auto; }
+.team-title { margin: 0; font-size: 2rem; }
+.team-sub { margin: 0.2rem 0 1rem; color: #aeb7ff; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+.member-card { display: flex; gap: 1rem; align-items: flex-start; background: rgba(19, 26, 46, 0.78); border: 1px solid rgba(140, 150, 255, 0.25); border-radius: 16px; padding: 1rem; min-height: 140px; }
+.avatar { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; background: rgba(120,130,255,0.2); }
+.member-name { font-weight: 800; }
+.member-role { color: #cbd2ff; font-size: 0.9rem; margin: 0.25rem 0 0.6rem; }
+.member-links { display: flex; gap: 0.6rem; }
+.social-link { text-decoration: none; }
+.social-icon { width: 20px; height: 20px; opacity: 0.8; transition: opacity 0.2s ease; }
+.social-icon:hover { opacity: 1; }
+
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+
+/* ========================
+   Join Us Section
+   ======================== */
+.join-us { width: 100%; padding: 3rem 1.2rem; background: #0f173d; color: #e6eaff; text-align: center; }
+.join-wrap { max-width: 800px; margin: 0 auto; }
+.join-title { font-size: 3rem; margin: 0 0 0.9rem; font-weight: 800; }
+.join-sub { font-size: 1.05rem; color: white; margin: 0 0 1.6rem; line-height: 1.6; }
+.join-buttons { display: flex; justify-content: center; }
+.btn.join-primary {
+  position: relative;
+  background: linear-gradient(180deg, #6b7bff, #4b5cff);
+  border-color: #5b6bff;
+  color: white;
+  padding: 0.85rem 2.4rem;
+  font-weight: 700;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(91, 107, 255, 0.25), inset 0 0 20px rgba(160, 180, 255, 0.25);
+}
+.btn.join-primary::after { content: "\2192"; margin-left: 10px; }
+
+.join-icons { margin-top: 1.4rem; display: flex; gap: 1rem; justify-content: center; align-items: center; }
+.join-icon { width: 28px; height: 28px; border-radius: 8px; background: rgba(120,130,255,0.15); border: 1px solid rgba(120,130,255,0.35); display: inline-flex; align-items: center; justify-content: center; }
+
+@media (max-width: 600px) {
+  .join-title { font-size: 2.2rem; }
+}
