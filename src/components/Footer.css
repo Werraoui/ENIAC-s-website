@@ -1,0 +1,176 @@
+.footer {
+  
+  background-color: #0f173d;;
+  background-size: 200px 100px;
+  color: #fafafa; /* Clean Light */
+  padding: 3rem 4rem 1rem;
+  font-family: sans-serif;
+  font-size: 14px;
+  position: relative;
+  min-height: 300px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+  pointer-events: none;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Section - ENIAC Branding */
+.footer-left {
+  max-width: 280px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(124, 58, 237, 0.6); /* Electric Purple */
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fafafa;
+}
+
+.description {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  color: #fafafa;
+}
+
+/* Footer Columns */
+.footer-column {
+  text-align: center;
+  min-width: 120px;
+}
+
+.footer-column h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin: 0.5rem 0;
+  cursor: pointer;
+  color: #fafafa;
+  transition: color 0.3s ease;
+}
+
+.footer-column li:hover {
+  color: #7c3aed; /* Electric Purple */
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  max-width: 280px;
+  text-align: center;
+}
+
+.footer-newsletter h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+.footer-newsletter p {
+  margin: 0.5rem 0 1rem;
+  color: #fafafa;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  background: #0f173d; /* Darker panel */
+  color: #fafafa;
+  font-size: 14px;
+}
+
+.newsletter-form input::placeholder {
+  color: #999;
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%); /* Neon Azure to Electric Purple */
+  color: #fafafa;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.9;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #fafafa;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.credits {
+  font-size: 12px;
+  color: #fafafa;
+  opacity: 0.8;
+  margin: 0;
+}

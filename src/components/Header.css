@@ -1,25 +1,52 @@
+/* Main Header Container - Glassmorphism Navigation Bar */
 .Header {
   display: flex;
-  justify-content: space-between; /* logo+title | nav | button */
-  align-items: center;           /* vertically center everything */
-  padding: 10px 20px;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f173d; /* card color with transparency */
+  backdrop-filter: blur(20px);
+  border-radius: 50px;
+  margin: 1rem 2rem;
+  border: 1px solid #7c3aed; /* purple with transparency */
+  box-shadow: 0 8px 32px rgba(10, 15, 45, 0.4); /* space color shadow */
 }
 
-/* Logo image */
-.Header img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+/* Logo + Title container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo-container h1 {
+  color:white;
+}
+
+/* Maximized Logo */
+.logo-container img {
+  width: 80px;
+  height: 70px;
   object-fit: contain;
+  background: rgba(124, 58, 237, 0.6); /* electric purple with transparency */
+  border-radius: 12px;
+  padding: 8px;
 }
 
-/* Navigation list */
+/* Title next to the logo */
+.logo-container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fafafa; /* clean light */
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
 .navlist {
   display: flex;
-  list-style: none; /* remove bullets */
-  gap: 20px;        /* space between links */
+  list-style: none;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -27,24 +54,59 @@
 .navlist li {
   cursor: pointer;
   font-weight: 500;
-  transition: color 0.3s ease;
+  position: relative;
+  color: #fafafa; /* clean light */
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.navlist li.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed); /* neon azure to electric purple */
+  border-radius: 2px;
 }
 
 .navlist li:hover {
-  color: #007bff; /* hover effect */
+  color: #2563eb; /* neon azure on hover */
+  transform: translateY(-1px);
 }
 
-/* Join Us button */
+/* Join Us Button */
 .joinus-btn {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed); /* neon azure to electric purple */
+  color: #000000; /* clean light */
+  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3); /* neon azure shadow */
 }
 
 .joinus-btn:hover {
-  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); /* neon azure shadow on hover */
+}
+
+.joinus-btn:active {
+  transform: translateY(0);
+}
+
+/* Join Us button icon */
+.join-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0); /* Makes the icon black to match the text */
 }
